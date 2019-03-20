@@ -15,6 +15,8 @@ $ npm install vue-mint-slider
 Import components to your project:
 
 ``` js
+require('vue-mint-slider/dist/vue-mint-slider.css');
+
 // in ES6 modules
 import { Slider, SliderItem } from 'vue-mint-slider';
 
