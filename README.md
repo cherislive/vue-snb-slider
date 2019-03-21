@@ -65,7 +65,7 @@ Work on a Vue instance:
   <slider-item>slider3</slider-item>
 </slider>
 ```
-## Options
+## Slider Options
 
 ### Props
 
@@ -82,6 +82,19 @@ Work on a Vue instance:
 | ----- | ----- | ----- |
 | change | triggers when current slider-item change | new slider item Index |
 
+## SliderItem Options
+
+### Props
+
+| Option | Type | Description | Default |
+| ----- | ----- | ----- | ----- |
+| item | Object | -- | -- |
+
+### Events
+
+| Event Name | Description | params |
+| ----- | ----- | ----- |
+| sliderItemOnClick | triggers when click slider-item | Props item: {}  |
 
 ## Development
 

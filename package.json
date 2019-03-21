@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot",
     "remote-dev": "npm run dev --host",
     "build": "webpack -p",
-    "release": "standard-version & git push --follow-tags eleme master & npm publish",
+    "release": "standard-version & git push origin master & npm publish",
     "prepare": "npm run build"
   },
   "repository": {
