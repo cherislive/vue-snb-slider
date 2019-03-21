@@ -2,6 +2,10 @@
 
 vue-mint-slider is a slider componen for Vue.js.
 
+## Mobile demo
+
+![https://cherislive.github.io/projrct/vue-mint-slider/](./dist/20190321-173707.png)
+
 ## Install
 
 ```bash
