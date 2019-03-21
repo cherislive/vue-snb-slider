@@ -2,6 +2,17 @@
 
 vue-mint-slider is a slider componen for Vue.js.
 
+[![GitHub stars](https://img.shields.io/github/stars/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/stargazers)
+[![Build Status](https://travis-ci.org/cherislive/vue-mint-slider.svg?branch=master)](https://travis-ci.org/cherislive/vue-mint-slider)
+[![GitHub issues](https://img.shields.io/github/issues/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/issues)
+[![GitHub forks](https://img.shields.io/github/forks/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider)
+[![NPM](https://nodei.co/npm/vue-mint-slider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-mint-slider/)
+[![NPM](https://nodei.co/npm-dl/vue-mint-slider.png?months=9&height=3)](https://nodei.co/npm/vue-mint-slider/)
+
+
+
 ## Mobile demo
 
 ![https://cherislive.github.io/projrct/vue-mint-slider/](./dist/20190321-173707.png =160x160)
