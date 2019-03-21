@@ -1,6 +1,6 @@
 {
   "name": "vue-mint-slider",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A touch slider for vue.js.",
   "main": "dist/vue-mint-slider.js",
   "scripts": {
