@@ -15,7 +15,7 @@ vue-snb-slider is a slider componen for Vue.js.
 
 ## Mobile demo
 
-![https://cherislive.github.io/projrct/vue-snb-slider/](./dist/20190321-173707.png)
+![https://cherislive.github.io/projrct/vue-snb-slider/](./20190321-173707.png)
 
 ## Install
 
