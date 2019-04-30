@@ -1,26 +1,26 @@
-# vue-dnb-slider
+# vue-snb-slider
 
-vue-dnb-slider is a slider componen for Vue.js.
+vue-snb-slider is a slider componen for Vue.js.
 
-[![GitHub stars](https://img.shields.io/github/stars/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/stargazers)
-[![Build Status](https://travis-ci.org/cherislive/vue-dnb-slider.svg?branch=master)](https://travis-ci.org/cherislive/vue-dnb-slider)
-[![GitHub issues](https://img.shields.io/github/issues/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/issues)
-[![GitHub forks](https://img.shields.io/github/forks/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider)
-[![NPM](https://nodei.co/npm/vue-dnb-slider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-dnb-slider/)
-[![NPM](https://nodei.co/npm-dl/vue-dnb-slider.png?months=9&height=3)](https://nodei.co/npm/vue-dnb-slider/)
+[![GitHub stars](https://img.shields.io/github/stars/cherislive/vue-snb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-snb-slider/stargazers)
+[![Build Status](https://travis-ci.org/cherislive/vue-snb-slider.svg?branch=master)](https://travis-ci.org/cherislive/vue-snb-slider)
+[![GitHub issues](https://img.shields.io/github/issues/cherislive/vue-snb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-snb-slider/issues)
+[![GitHub forks](https://img.shields.io/github/forks/cherislive/vue-snb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-snb-slider/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/cherislive/vue-snb-slider)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/cherislive/vue-snb-slider)
+[![NPM](https://nodei.co/npm/vue-snb-slider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-snb-slider/)
+[![NPM](https://nodei.co/npm-dl/vue-snb-slider.png?months=9&height=3)](https://nodei.co/npm/vue-snb-slider/)
 
 
 
 ## Mobile demo
 
-![https://cherislive.github.io/projrct/vue-dnb-slider/](./dist/20190321-173707.png)
+![https://cherislive.github.io/projrct/vue-snb-slider/](./dist/20190321-173707.png)
 
 ## Install
 
 ```bash
-$ npm install vue-dnb-slider
+$ npm install vue-snb-slider
 ```
 
 ## Import
@@ -31,10 +31,10 @@ Import components to your project:
 
 ``` js
 // in ES6 modules
-import { Slider, SliderItem } from 'vue-dnb-slider';
+import { Slider, SliderItem } from 'vue-snb-slider';
 
 // in CommonJS
-const { Slider, SliderItem } = require('vue-dnb-slider');
+const { Slider, SliderItem } = require('vue-snb-slider');
 
 // in Global variable
 const { Slider, SliderItem } = VueSnbSlider;
@@ -50,7 +50,7 @@ Vue.component('slider-item', SliderItem);
 ### Import using script tag
 
 ``` html
-<script src="../node-modules/vue-dnb-slider/dist/vue-dnb-slider.js"></script>
+<script src="../node-modules/vue-snb-slider/dist/vue-snb-slider.js"></script>
 ```
 
 ``` js
