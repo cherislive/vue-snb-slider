@@ -1,5 +1,5 @@
 <template>
-  <div class="mint-slider-item" @click.stop="sliderItemClickHandle">
+  <div class="snb-slider-item" @click.stop="sliderItemClickHandle">
     <slot></slot>
   </div>
 </template>

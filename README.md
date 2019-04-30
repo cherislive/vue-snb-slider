@@ -1,26 +1,26 @@
-# vue-mint-slider
+# vue-dnb-slider
 
-vue-mint-slider is a slider componen for Vue.js.
+vue-dnb-slider is a slider componen for Vue.js.
 
-[![GitHub stars](https://img.shields.io/github/stars/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/stargazers)
-[![Build Status](https://travis-ci.org/cherislive/vue-mint-slider.svg?branch=master)](https://travis-ci.org/cherislive/vue-mint-slider)
-[![GitHub issues](https://img.shields.io/github/issues/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/issues)
-[![GitHub forks](https://img.shields.io/github/forks/cherislive/vue-mint-slider.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/cherislive/vue-mint-slider)
-[![NPM](https://nodei.co/npm/vue-mint-slider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-mint-slider/)
-[![NPM](https://nodei.co/npm-dl/vue-mint-slider.png?months=9&height=3)](https://nodei.co/npm/vue-mint-slider/)
+[![GitHub stars](https://img.shields.io/github/stars/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/stargazers)
+[![Build Status](https://travis-ci.org/cherislive/vue-dnb-slider.svg?branch=master)](https://travis-ci.org/cherislive/vue-dnb-slider)
+[![GitHub issues](https://img.shields.io/github/issues/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/issues)
+[![GitHub forks](https://img.shields.io/github/forks/cherislive/vue-dnb-slider.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/cherislive/vue-dnb-slider)
+[![NPM](https://nodei.co/npm/vue-dnb-slider.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-dnb-slider/)
+[![NPM](https://nodei.co/npm-dl/vue-dnb-slider.png?months=9&height=3)](https://nodei.co/npm/vue-dnb-slider/)
 
 
 
 ## Mobile demo
 
-![https://cherislive.github.io/projrct/vue-mint-slider/](./dist/20190321-173707.png)
+![https://cherislive.github.io/projrct/vue-dnb-slider/](./dist/20190321-173707.png)
 
 ## Install
 
 ```bash
-$ npm install vue-mint-slider
+$ npm install vue-dnb-slider
 ```
 
 ## Import
@@ -30,16 +30,14 @@ $ npm install vue-mint-slider
 Import components to your project:
 
 ``` js
-require('vue-mint-slider/dist/vue-mint-slider.css');
-
 // in ES6 modules
-import { Slider, SliderItem } from 'vue-mint-slider';
+import { Slider, SliderItem } from 'vue-dnb-slider';
 
 // in CommonJS
-const { Slider, SliderItem } = require('vue-mint-slider');
+const { Slider, SliderItem } = require('vue-dnb-slider');
 
 // in Global variable
-const { Slider, SliderItem } = VueMintSlider;
+const { Slider, SliderItem } = VueSnbSlider;
 ```
 
 And register components:
@@ -52,13 +50,12 @@ Vue.component('slider-item', SliderItem);
 ### Import using script tag
 
 ``` html
-<link rel="stylesheet" href="../node-modules/vue-mint-slider/dist/vue-mint-slider.css" charset="utf-8">
-<script src="../node-modules/vue-mint-slider/dist/vue-mint-slider.js"></script>
+<script src="../node-modules/vue-dnb-slider/dist/vue-dnb-slider.js"></script>
 ```
 
 ``` js
-const vueSlider = VueMintSlider.Slider;
-const vueSliderItem = VueMintSlider.SliderItem;
+const vueSlider = VueSnbSlider.Slider;
+const vueSliderItem = VueSnbSlider.SliderItem;
 
 new Vue({
   el: 'body',

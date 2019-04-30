@@ -5,113 +5,141 @@
   <div class="header">
     <div class="example-tips" v-if="!browser.isMobile">请在移动端打开，或者使用浏览器开发者模式。</div>
     <div class="inner">
-      <h1>Slider 演示 <span>V3.0.2</span></h1>
-      <a class="masthead-links" href="https://github.com/cherislive/vue-mint-slider">
+      <h1>Slider 演示 <span>V3.0.X</span></h1>
+      <a class="masthead-links" href="https://github.com/cherislive/vue-snb-slider">
         <svg height="22" class="octicon octicon-mark-github d-block mr-2 float-left" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
       </a>
     </div>
   </div>  
   <div class="example-wrap">
-    <div class="demo-item">
-      <h3 class="demo-tit">基础滑动01</h3>
-      <Slider>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 1</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 2</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#fad733;">Slider 4</SliderItem>
-      </Slider>
-      <p class="demo-desc">默认配置</p>
+    <div class="demo-tit">
+      <h1>Slider 滑块</h1>
+      <p>一款移动端常用的卡片滑块组件。</p>
     </div>
-
     <div class="demo-item">
-      <h3 class="demo-tit">基础滑动02</h3>
-      <Slider
-        :showIndicators="false"
-      >
-        <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 1</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 2</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#fad733;">Slider 4</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#f05050;">Slider 5</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 6</SliderItem>
-      </Slider>
-      <div class="demo-desc">
-        隐藏分页器
-        <pre>:showIndicators="false"</pre>
+      <div class="demo-tit"><h3>基础滑动01</h3></div>
+      <div class="demo-block">
+        <Slider>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 1</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 2</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#fad733;">Slider 4</SliderItem>
+        </Slider>
+        <div class="demo-desc" v-highlight>默认配置
+        <pre><code>$ npm install vue-snb-table  --save
+
+// script
+import { Slider, SliderItem } from 'vue-snb-slider';
+components: {
+  Slider, SliderItem
+},
+
+// template
+&lt;Slider&gt;
+  &lt;SliderItem&gt;Slider 1&lt;/SliderItem&gt;
+  &lt;SliderItem&gt;Slider 2&lt;/SliderItem&gt;
+  &lt;SliderItem&gt;Slider 3&lt;/SliderItem&gt;
+&lt;/Slider&gt;
+
+</code></pre></div>
       </div>
     </div>
 
     <div class="demo-item">
-      <h3 class="demo-tit">一次显示多个slides</h3>
-      <Slider
-        :perView="2"
-        :perGroup="1"
-      >
-        <SliderItem class="base-slider-item" style="background:#f05050;">Slider 1</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#fad733;">Slider 2</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 4</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 5</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 6</SliderItem>
-      </Slider>
-      <div class="demo-desc">
-        一次显示2个slides，slides的数量1个为一组
-<pre>
-:perView="2"
+      <div class="demo-tit"><h3>基础滑动02</h3></div>
+      <div class="demo-block">
+        <Slider
+          :showIndicators="false"
+        >
+          <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 1</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 2</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#fad733;">Slider 4</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#f05050;">Slider 5</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 6</SliderItem>
+        </Slider>
+        <div class="demo-desc" v-highlight>
+          隐藏分页器
+          <pre><code>:showIndicators="false"</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-tit"><h3>一次显示多个slides</h3></div>
+      <div class="demo-block">
+        <Slider
+          :perView="2"
+          :perGroup="1"
+        >
+          <SliderItem class="base-slider-item" style="background:#f05050;">Slider 1</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#fad733;">Slider 2</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 3</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 4</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 5</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 6</SliderItem>
+        </Slider>
+        <div class="demo-desc" v-highlight>
+          一次显示2个slides，slides的数量1个为一组
+<pre><code>:perView="2"
 :perGroup="1"
-</pre>
+</code></pre>
+        </div>
       </div>
     </div>
 
     <div class="demo-item">
-      <h3 class="demo-tit">一次显示多个slides、Slides分组</h3>
-      <Slider
-        :perView="2"
-        :perGroup="2"
-      >
-        <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 1</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#f05050;">Slider 2</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#fad733;">Slider 3</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 4</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 5</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 6</SliderItem>
-      </Slider>
-      <div class="demo-desc">
-        一次显示2个slides，slides的数量2个为一组
-<pre>
-:perView="2"
+      <div class="demo-tit"><h3>一次显示多个slides、Slides分组</h3></div>
+      <div class="demo-block">
+        <Slider
+          :perView="2"
+          :perGroup="2"
+        >
+          <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 1</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#f05050;">Slider 2</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#fad733;">Slider 3</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 4</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 5</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 6</SliderItem>
+        </Slider>
+        <div class="demo-desc" v-highlight>
+          一次显示2个slides，slides的数量2个为一组
+<pre><code>:perView="2"
 :perGroup="2"
-</pre>
+</code></pre>
+        </div>
       </div>
     </div>
 
     <div class="demo-item">
-      <h3 class="demo-tit">一次显示多个slides、Slides分组</h3>
-      <Slider
-        :perView="2.3"
-        :perGroup="2"
-      >
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 1</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 2</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 3</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 4</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#f05050;">Slider 5</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#fad733;">Slider 6</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 7</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 8</SliderItem>
-        <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 9</SliderItem>
-      </Slider>
-      <div class="demo-desc">
-        一次显示2个slides，slides的数量2个为一组
-<pre>
-:perView="2"
+      <div class="demo-tit"><h3>一次显示多个slides、Slides分组</h3></div>
+      <div class="demo-block">
+        <Slider
+          :perView="2.3"
+          :perGroup="2"
+        >
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 1</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 2</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 3</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#7266ba;">Slider 4</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#f05050;">Slider 5</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#fad733;">Slider 6</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#27c24c;">Slider 7</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#23b7e5;">Slider 8</SliderItem>
+          <SliderItem class="base-slider-item" style="background:#3a3f51;">Slider 9</SliderItem>
+        </Slider>
+        <div class="demo-desc" v-highlight>
+          一次显示2个slides，slides的数量2个为一组
+<pre><code>:perView="2"
 :perGroup="2"
-</pre>
+</code></pre>
+        </div>
       </div>
     </div>
 
-    <div>
-      <h3 class="demo-tit">一次显示多个slides、Slides分组整倍数</h3>
+    <div class="demo-item">
+      <div class="demo-tit"><h3>一次显示多个slides、Slides分组整倍数</h3></div>
+      <div class="demo-block">
       <Slider
         :perView="5"
         :perGroup="5"
@@ -125,13 +153,13 @@
         <SliderItem class="base-slider-item" style="background:#fad733;">6</SliderItem>
         <SliderItem class="base-slider-item" style="background:#27c24c;">7</SliderItem>
       </Slider>
-      <div class="demo-desc">
+      <div class="demo-desc" v-highlight>
         一次显示5个slides，slides的数量5个为一组，不足一组仍然保留位置
-<pre>
-:perView="5"
+<pre><code>:perView="5"
 :perGroup="5"
 :groupFull="true"
-</pre>
+</code></pre>
+      </div>
       </div>
     </div>
 
@@ -139,13 +167,13 @@
 
   </div>
   <div class="footer">
-    <p>Open sourced under MIT. <br />Copyright (c) 2019 CHERIS.CN, All rights reserved.</p>
+    <p>Open sourced under MIT. <br />Copyright &copy; 2019 <a href="https://www.cheris.cn" target="_blank">CHERIS.CN</a>, All rights reserved.</p>
     <ul class="quick-links">
     <li>
-      <iframe src="https://ghbtns.com/github-btn.html?user=cherislive&repo=vue-mint-slider&type=star&count=false" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=cherislive&repo=vue-snb-slider&type=star&count=false" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
     </li>
     <li>
-      <iframe src="https://ghbtns.com/github-btn.html?user=cherislive&repo=vue-mint-slider&type=fork&count=false" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=cherislive&repo=vue-snb-slider&type=fork&count=false" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
     </li>
   </ul>
   </div>
@@ -180,8 +208,8 @@
 </script>
 
 <style>
-html,body,#demo{background:#f8f8f8;}
-#demo{padding:60px 0 20px;}
+html,body,#demo{background:#fff;}
+#demo{padding:60px 0 20px; color:#606266;}
 #demo.is-pc{padding-top:100px;}
 .header{position: fixed; left:0; top:0; z-index:10; width:100%;background:#fff;  margin:0 auto; border-bottom:1px solid #e5e5e5;}
 .header .inner{display:block; margin:0 auto; padding: 10px 20px; overflow: hidden;}
@@ -190,14 +218,21 @@ html,body,#demo{background:#f8f8f8;}
 .header .masthead-links{float: right; display:block;color:#000; opacity:.3;}
 .header .masthead-links svg{display:block;}
 .example-tips{width:100%; text-align:center; font-size:14px; line-height:32px; background:#090723; color:rgba(255,255,255,.5);}
-.example-wrap{max-width: 640px; width:90%; background:#fff; padding: 10px 15px; margin:0 auto; border:1px solid #e5e5e5;}
-.example-wrap .demo-tit{text-align:center; font-size:14px; line-height:26px; color:#1e70cd; font-weight:normal;}
-.example-wrap .demo-desc{font-size:12px; line-height:22px; color:#999; font-weight:normal;}
+.example-wrap{max-width: 640px; width:90%; background:#fff; margin:0 auto;}
+.example-wrap .demo-desc{padding:10px 0; font-size:12px; line-height:22px; color:#999; font-weight:normal;}
 .base-slider-item{height:126px; color:#fff; font-size:36px; line-height:126px; text-align:center; background:#ccc;}
-.demo-item{padding:0 0 40px;}
+.demo-item{padding:0 0 30px;}
+.demo-tit{padding:10px; font-size:14px; line-height:26px; color:#5e6d82;}
+.demo-tit h1{font-size:26px; line-height:32px; font-weight:normal; color:#1f2f3d;}
+.demo-tit h3{font-size:18px; line-height:26px; font-weight:normal; color:#1f2f3d;}
+.demo-block{padding:10px; border: 1px solid #ebebeb; border-radius: 3px; transition: .2s;}
+.demo-block:hover{box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);}
 .quick-links{text-align:center;}
-.footer{padding-top:20px;}
+.footer{padding-top:20px; text-align:center; color:#999; font-size:12px;}
 .footer p{font-size:12px; color:#999; text-align:center;}
+.footer a{color:#999;}
 .quick-links{padding-top:10px;} 
 .quick-links li{display:inline-block;}
+.footer .masthead-links{display:inline-block;color:#000; opacity:.3;}
+.footer .masthead-links svg{display:block;}
 </style>

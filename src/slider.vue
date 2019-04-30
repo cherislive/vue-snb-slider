@@ -1,17 +1,20 @@
 <template>
-<div class="mint-slider" ref="wrap">
-  <div class="mint-slider-items-wrap" ref="sliders"
+<div class="ui-snb-slider" ref="wrap">
+  <div class="snb-slider-items-wrap" ref="sliders"
     @touchstart="touchStartHandle"
     @touchmove="touchMoveHandle"
     @touchend="touchEndHandle"
+    @mousemove="mousemoveHandle"
+    @mouseup="mouseupHandle"
+    @mousedown="mousedownHandle"
     @webkit-transition-end="onTransitionEnd()"
     @transitionend="onTransitionEnd()"
   >
     <slot></slot>
   </div>
-  <div class="mint-slider-indicators" v-if="showIndicators && pageCount > 1">
+  <div class="snb-slider-indicators" v-if="showIndicators && pageCount > 1">
     <div v-for="(item, index) in pageCount" :key="index" :class="{
-      'mint-slider-indicator': true,
+      'snb-slider-indicator': true,
       'is-active': index === activePage
     }">{{item}}</div>
   </div>
@@ -132,22 +135,61 @@ export default {
       this.sliders.style['width'] = `${this.slidersWidth}px`;
     },
     /**
+     * mousedown handle
+     */
+    mousedownHandle (event) {
+      event.preventDefault();
+      this.startHandle(event);
+    },
+    /**
+     * mousemove handle
+     */
+    mousemoveHandle (event) {
+      this.moveHandle(event);
+    },
+    /**
+     * mouseup handle
+     */
+    mouseupHandle (event) {
+      this.endHandle(event);
+    },
+    /**
      * touchstart handle
      */
     touchStartHandle (event) {
       event.preventDefault();
       let touch = event.touches[0];
-      this.start.x = touch.pageX;
-      this.start.y = touch.pageY;
+      this.startHandle(touch);
     },
     /**
      * touchmove handle
      */
     touchMoveHandle (event) {
       let touch = event.touches[0];
+      this.moveHandle(touch);
+    },
+    /**
+     * touchend handle
+     */
+    touchEndHandle (event) {
+      let touch = event.changedTouches[0];
+      this.endHandle(touch);
+    },
+    /**
+     * touchstart handle
+     */
+    startHandle (offset) {
       this.isAnimation = true;
-      this.end.x = touch.pageX;
-      this.end.y = touch.pageY;
+      this.start.x = offset.pageX;
+      this.start.y = offset.pageY;
+    },
+    /**
+     * touchmove handle
+     */
+    moveHandle (offset) {
+      if (!this.isAnimation) return;
+      this.end.x = offset.pageX;
+      this.end.y = offset.pageY;
       this.distan.x = this.end.x - this.start.x;
       this.distan.y = this.end.y - this.start.y;
       let _sliderWidth = this.distan.x - this.sliderWidth * this.activeIndex;
@@ -165,11 +207,10 @@ export default {
     /**
      * touchend handle
      */
-    touchEndHandle (event) {
-      let touch = event.changedTouches[0];
-      this.isAnimation = true;
-      this.end.x = touch.pageX;
-      this.end.y = touch.pageY;
+    endHandle (offset) {
+      this.isAnimation = false;
+      this.end.x = offset.pageX;
+      this.end.y = offset.pageY;
       this.distan.x = this.end.x - this.start.x;
       this.distan.y = this.end.y - this.start.y;
 
@@ -224,21 +265,21 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.mint-slider
+.ui-snb-slider
   width 100%
   overflow hidden
-  .mint-slider-items-wrap
+  .snb-slider-items-wrap
     overflow hidden
-    .mint-slider-item
+    .snb-slider-item
       float left
       min-height 10px
-  .mint-slider-indicators
+  .snb-slider-indicators
     width 100%
     padding 8px 0
     text-align center
     font-size 0
     line-height 0
-    .mint-slider-indicator
+    .snb-slider-indicator
       display inline-block
       text-indent -9999px
       width 8px
